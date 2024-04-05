@@ -16,7 +16,8 @@ export default function AddCreditTakrem() {
                 className="form-control"
               />
             </div>
-            <div className={styles.inp1}>
+            <div className={ styles.inp1 }>
+              asd
               <label htmlFor=""> اسم والد صاحب البطاقة</label>
               <input
                 type="text"
