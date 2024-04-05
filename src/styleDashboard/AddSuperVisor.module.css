@@ -1,0 +1,52 @@
+.AddSuperVisor {
+  width: 100%;
+  height: 100%;
+}
+.head p {
+  background-color: #0d3a5a;
+  padding: 10px 20px 15px 0;
+  color: white;
+  transform: translateY(20px);
+  font-size: 14px;
+}
+.headForm {
+  padding-top: 30px;
+  width: 80%;
+  margin: auto;
+}
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.inp1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+.input1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.input1 textarea {
+  width: 100%;
+  height: 100px;
+}
+.btnbottom {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 30px 0;
+}
+.AddSuperVisor input {
+  padding: 4px;
+}
+.AddSuperVisor input::placeholder {
+  font-size: 9px;
+}
+.AddSuperVisor label {
+  font-size: 12px;
+}

@@ -1,0 +1,47 @@
+.header-container {
+  position: relative;
+  text-align: center;
+}
+
+.perantHeader {
+  height: 400px;
+}
+.perantHeader img {
+  height: 100%;
+}
+
+.perantpar {
+  width: 100%;
+}
+.head-btn {
+  padding: 0px, 47px, 0px, 47px;
+  background-color: #8f0101;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: 75%;
+  width: 147px;
+  height: auto;
+  gap: 10px;
+}
+.perantparhead {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  text-align: right;
+  color: white;
+  line-height: 1.8;
+}
+@media (max-width: 800px) {
+  .perantparhead {
+    width: 90%;
+  }
+}
+.head-img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  z-index: 0;
+}

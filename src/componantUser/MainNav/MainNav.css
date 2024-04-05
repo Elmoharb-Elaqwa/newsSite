@@ -1,0 +1,72 @@
+.social-icons {
+  background-color: #262a81;
+  font-size: 1.125rem;
+  border-radius: 5px;
+  position: absolute;
+  left: 90px;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.contact > p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.close {
+  cursor: pointer;
+}
+
+.btn-create,
+.btn-login {
+  font-size: 1rem;
+}
+
+.btn-create {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+.btn-create:hover {
+  border: 1px solid var(--main-color) !important;
+}
+.btn-login {
+  border: 1px solid var(--main-color) !important;
+}
+.btn-login:hover {
+  background-color: var(--main-color) !important;
+  color: white !important;
+}
+
+.search input {
+  width: 57%;
+  background-color: #eeeeee;
+  border: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .search input {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .search input {
+    width: 30%;
+  }
+  .search input::placeholder {
+    font-size: 0.7rem;
+  }
+  .social-icons {
+    left: -2px;
+  }
+}

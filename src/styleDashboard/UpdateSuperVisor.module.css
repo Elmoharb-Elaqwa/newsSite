@@ -1,0 +1,35 @@
+.AddSuperVisor{
+    width: 100%;
+    height: 100%;
+}
+.head p {
+  background-color: #0d3a5a;
+  padding: 10px 20px 15px 0;
+  color: white;
+  transform: translateY(20px);
+  font-size: 14px;
+}
+.headForm {
+  padding-top: 50px;
+  width: 80%;
+  margin: auto;
+}
+.input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.inp1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+.btnbottom{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    display: flex;
+    gap: 10px;
+}
