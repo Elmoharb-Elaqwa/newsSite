@@ -1,8 +1,8 @@
 import React from 'react'
-import RegimeMassacres from '../SectionsUser/RegimeMassacres/RegimeMassacresUser'
-import Martyrs from '../SectionsUser/Martyrs/MartyrsUser'
-import Missing from '../SectionsUser/Missing/MissingUser'
-import Detainees from '../SectionsUser/Detainees/DetaineesUser'
+import RegimeMassacres from './RegimeMassacres/RegimeMassacresUser'
+import Martyrs from './Martyrs/MartyrsUser'
+import Missing from './Missing/MissingUser'
+import Detainees from './Detainees/DetaineesUser'
 import SliderGaraemSystem from './SliderGaraemSystem'
 export default function BaraemSystem() {
   return (

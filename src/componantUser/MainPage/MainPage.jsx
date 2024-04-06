@@ -1,7 +1,7 @@
 import React from 'react';
-import Liberated from '../SectionsUser/Liberated/Liberated';
-import FlagsUser from '../SectionsUser/FlagsUser/FlagsUser';
-import RegimeMassacres from '../SectionsUser/RegimeMassacres/RegimeMassacresUser';
+import Liberated from './Liberated/Liberated';
+import FlagsUser from './FlagsUser/FlagsUser';
+import RegimeMassacres from './RegimeMassacres/RegimeMassacresUser';
 import { Link } from 'react-router-dom';
 
 export default function MainPage() {

@@ -7,7 +7,7 @@ export default function Footer() {
     <>
       <div className="footer pt-5 pb-3">
         <div className="container">
-          <h3 className="mb-4">الثورة السوريةhhhh</h3>
+          <h3 className="mb-4">الثورة السورية</h3>
           <div className="row gy-4">
             <div className="col-md-6">
               <div className="row gy-3">

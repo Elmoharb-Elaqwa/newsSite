@@ -1,5 +1,5 @@
 import React from 'react';
-import Liberated from '../SectionsUser/Liberated/Liberated';
+import Liberated from './Liberated/Liberated';
 import style from './SymbolThouraUser.module.css';
 import SliderSymbolThouraUser from './SliderSymbolThouraUser';
 export default function SymbolThouraUser() {
