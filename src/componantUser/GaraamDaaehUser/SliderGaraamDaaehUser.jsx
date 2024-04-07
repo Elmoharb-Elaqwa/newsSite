@@ -2,7 +2,7 @@ import React from 'react'
 import img3 from '../../assests/img3.jpg'
 import { Link } from "react-router-dom";
 import Slider from 'react-slick'
-
+import './SliderGramaamDaaeh.css'
 export default function SliderGaraamDaaehUser() {
     function SampleNextArrow(props) {
         const { className, style, onClick } = props;
@@ -31,8 +31,6 @@ export default function SliderGaraamDaaehUser() {
           slidesToShow: 4,
           slidesToScroll: 4,
           arrows:true,
-          autoplay : true ,
-          autoplaySpeed : 1500 ,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />,
           
@@ -71,7 +69,7 @@ export default function SliderGaraamDaaehUser() {
         <Slider {...settings}>
             <div className="slide mx-2">
             <div className="image mb-2 mx-2 ">
-                    <img src={img3} alt="image" className=' w-100 rounded-circle' />
+                    <img src={img3} alt="image" className=' w-100 slide-image ' />
                 </div>
                 <p  className='px-2'>الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبرالخبر الخبر الخبر
                     <Link className='nav-link d-inline-block mx-1 px-3 rounded-3'>المزيد</Link>
@@ -79,7 +77,7 @@ export default function SliderGaraamDaaehUser() {
             </div>
             <div className="slide mx-2">
             <div className="image mb-2 mx-2">
-                    <img src={img3} alt="image" className=' w-100 rounded-circle' />
+                    <img src={img3} alt="image" className=' w-100 slide-image ' />
                 </div>
                 <p  className='px-2'>الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبرالخبر الخبر الخبر....
                     <Link className='nav-link d-inline-block mx-1 px-3 rounded-3'>المزيد</Link>
@@ -87,7 +85,7 @@ export default function SliderGaraamDaaehUser() {
             </div>
             <div className="slide mx-2">
             <div className="image mb-2 mx-2">
-                    <img src={img3} alt="image" className=' w-100 rounded-circle' />
+                    <img src={img3} alt="image" className=' w-100 slide-image' />
                 </div>
                 <p className='px-2'>الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبر الخبرالخبر الخبر الخبر....
                     <Link className='nav-link d-inline-block mx-1 px-3 rounded-3'>المزيد</Link>

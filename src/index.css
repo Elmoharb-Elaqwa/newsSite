@@ -69,3 +69,9 @@ table td {
   max-height: 350px;
   overflow-y: auto;
 }
+
+
+.slick-prev:before, .slick-next:before {
+  color: black;
+  font-size: 30px;
+}

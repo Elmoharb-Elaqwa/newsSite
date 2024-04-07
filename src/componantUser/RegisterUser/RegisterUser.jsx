@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import style from './RegisterUser.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
-import { useUser } from '../../context/Context';
+import { useUser,ContextUser } from '../../context/Context';
 export default function RegisterUser() {
     const [ open, setOpen ] = useState( false );
+    const {openAuth, setOpenAuth}= useContext(ContextUser)
+
     const { closeAuth,successRegister ,openLogin} = useUser();
   return (
     <>
@@ -21,7 +23,7 @@ export default function RegisterUser() {
                 color: "red",
                 cursor: "pointer",
               }}
-              onClick={closeAuth}
+              onClick={()=>setOpenAuth('')}
             />
             <hr />
           </div>
@@ -64,6 +66,12 @@ export default function RegisterUser() {
               <div className={style.inpi}>
                 <label htmlFor=""> تاكيد كلمة المرور </label>
                 <input type="text" className="form-control" />
+              </div>
+            </div>
+            <div className={style.input}>
+            <div className={style.inpi}>
+                <label htmlFor="">   رمز الدخول (احتفظ به في حالة نسيت كلمة المرور) </label>
+                <input type="text" className="form-control " />
               </div>
             </div>
             <div className={style.wateca}>
@@ -109,8 +117,8 @@ export default function RegisterUser() {
               </div>
             </div>
             <div className={style.btnInpu}>
-              <button onClick={successRegister}>انشاء حساب</button>
-              <button onClick={openLogin}>لدي حساب بالفعل</button>
+              <button onClick={()=> setOpenAuth('successRegister')}>انشاء حساب</button>
+              <button onClick={()=>setOpenAuth('login')}>لدي حساب بالفعل</button>
             </div>
           </div>
         </form>

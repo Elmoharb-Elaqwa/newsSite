@@ -1,7 +1,10 @@
-import { useUser } from '../../context/Context';
+import { useContext } from 'react';
+import { ContextUser, useUser } from '../../context/Context';
 import styles from '../AddSahedUser/AddShahed.module.css'
+
 export default function AddKaaenUser() {
-     const { successAddInForm } = useUser()
+  const {openAuth, setOpenAuth}= useContext(ContextUser)
+
   return (
     <div>
       <form action="" className={styles.form}>
@@ -90,7 +93,7 @@ export default function AddKaaenUser() {
         <button
           className={`add`}
           style={{ color: "white", backgroundColor: "green" }}
-           onClick={successAddInForm}
+           onClick={()=>setOpenAuth('successaddinform')}
         >
           اضافة بيانات
         </button>

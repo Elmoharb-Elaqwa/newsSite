@@ -8,10 +8,16 @@
 }
 .perantHeader img {
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.015);
+
 }
 
 .perantpar {
-  width: 100%;
+  font-family: Cairo;
+  width: 70%;
+  margin-top: 15%;
+  font-weight: 400;
+  line-height: 29.98px;
 }
 .head-btn {
   padding: 0px, 47px, 0px, 47px;
@@ -20,9 +26,9 @@
   border: none;
   cursor: pointer;
   margin-left: 75%;
-  width: 147px;
+  width: 146px;
   height: auto;
-  gap: 10px;
+  margin-top: 9px;
 }
 .perantparhead {
   position: absolute;

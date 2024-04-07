@@ -24,36 +24,42 @@ export default function LoginUser() {
           className={style.headForm}
           style={{ width: "60%", marginTop: "-20px" }}
         >
-          <h6> تسجيل الدخول</h6>
+          <h6>  تعيين كلمة المرور الجديدة </h6>
 
           <hr />
         </div>
         <div className={style.inform}>
           <div className={style.inpi2}>
-            <label htmlFor=""> البريد الالكتروني </label>
+            <label htmlFor="">  كلمة المرور الجديدة </label>
             <input
               type="text"
               className="form-control"
-              placeholder="البريد الالكتروني"
+              placeholder=" كلمة المرور "
             />
           </div>
           <div className={style.inpi2}>
-            <label htmlFor=""> كلمة المرور </label>
+            <label htmlFor="">  تأكيد كلمة المرور الجديدة </label>
             <input
               type="text"
               className="form-control"
               placeholder="كلمة المرور"
             />
-            <p onClick={()=>setOpenAuth('forget')} style={{ cursor: "pointer" }}>
-              هل نسيت كلمة المرور
-            </p>
+            
           </div>
+         
 
-          <div className={style.btnInpu}>
-            <button> تسجيل الدخول</button>
-            <button onClick={(e)=>e.preventDefault()}>
-              {" "}
-              ليس لدي حساب . <span onClick={()=>setOpenAuth('register')}>انشاء حساب</span>
+          <div className={style.btnInpu1}>
+            <button onClick={()=>setOpenAuth('save')}>   حفظ </button>
+
+            <button
+              style={{
+                backgroundColor: "transparent",
+                              border: "1px solid #3035A1",
+                color:'#3035A1'
+                          } }
+                          onClick={ ()=>setOpenAuth('') }
+            >
+              رجوع
             </button>
           </div>
         </div>

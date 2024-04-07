@@ -1,9 +1,10 @@
-import React from 'react'
+import {React,useContext} from 'react'
 import styles from '../AddSahedUser/AddShahed.module.css'
-import { useUser } from "../../context/Context";
+import { ContextUser } from "../../context/Context";
 
 export default function AddMogramUser() {
-   const { successAddInForm } = useUser();
+  const {openAuth, setOpenAuth}= useContext(ContextUser)
+
   return (
     <div>
       <form action="" className={styles.form}>
@@ -92,7 +93,7 @@ export default function AddMogramUser() {
         <button
           className={`add`}
           style={{ color: "white", backgroundColor: "green" }}
-              onClick={successAddInForm}
+              onClick={()=> setOpenAuth('successaddinform')}
         >
           اضافة بيانات
         </button>

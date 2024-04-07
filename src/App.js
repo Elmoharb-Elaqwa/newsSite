@@ -34,9 +34,15 @@ import GaraamQasad from './componantUser/GraamQasad/GaraamQasad';
 import MainPage from './componantUser/MainPage/MainPage';
 import { ContextProvider } from './context/Context';
 import BaraemSystem from './componantUser/GaraamSystem/BaraemSystem';
+import NewsDetails from './componantUser/NewsDetails/NewsDetails';
+import WantedToSystem from './componantUser/WantedToSytstem/WantedToSystem';
+import { ContextDashboardProvider } from './context/DashboardContext';
+import { ContextUserProvider } from './context/UserContext';
 
 export default function App() {
   return (
+    <ContextDashboardProvider>
+      <ContextUserProvider>
     <ContextProvider>
       <BrowserRouter>
         <Routes>
@@ -47,9 +53,14 @@ export default function App() {
             <Route path="blacklistuser" element={<BlackListUser />} />
             <Route path="graamsystem" element={<BaraemSystem />} />
             <Route path="graemqasad" element={<GaraamQasad />} />
-
             <Route path="graemdashuser" element={<GaraamDaaehUser />} />
+          
           </Route>
+          <Route path="newsDetails" element={<NewsDetails />} />
+          <Route path="WantedToSystem" element={<WantedToSystem />} />
+
+
+
           <Route path="dashboard" element={<HomeDashboard />}>
             <Route path="supervisor" element={<SuperVisors />} />
             <Route path="addsupervisor" element={<AddSuperVisor />} />
@@ -90,5 +101,7 @@ export default function App() {
         </Routes>
       </BrowserRouter>
     </ContextProvider>
+    </ContextUserProvider>
+    </ContextDashboardProvider>
   );
 }

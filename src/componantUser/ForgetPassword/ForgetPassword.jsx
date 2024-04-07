@@ -1,10 +1,13 @@
-import React from "react";
+import {React,useContext} from "react";
 import style from "../RegisterUser/RegisterUser.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { useUser } from "../../context/Context";
+import { ContextUser } from "../../context/Context";
 export default function ForgetPassword() {
-  const { closeAuth } = useUser();
+
+  const {openAuth, setOpenAuth}= useContext(ContextUser)
+
+  
   return (
     <div className={style.RegisterUser}>
       <form className={style.formsForget}>
@@ -16,7 +19,7 @@ export default function ForgetPassword() {
             color: "red",
             cursor: "pointer",
           }}
-          onClick={closeAuth}
+          onClick={()=> setOpenAuth('')}
         />
         <div
           className={style.headForm}
@@ -28,22 +31,23 @@ export default function ForgetPassword() {
         </div>
         <div className={style.inform1}>
           <div className={style.inpi2}>
-            <label htmlFor="">ادخل البريد الالكتروني </label>
+            <label htmlFor="">ادخل رمز الدخول  </label>
             <input
               type="text"
               className="form-control"
-              placeholder=" البريد الالكتروني"
+              placeholder="  رمز الدخول"
             />
           </div>
           <div className={style.btnInpu1}>
-            <button> ارسل رسالة تاكيد</button>
+            <button onClick={()=>setOpenAuth('rest')}>   تعيين كلمة المرور </button>
+
             <button
               style={{
                 backgroundColor: "transparent",
                               border: "1px solid #3035A1",
                 color:'#3035A1'
                           } }
-                          onClick={closeAuth}
+                          onClick={ ()=>setOpenAuth('') }
             >
               رجوع
             </button>

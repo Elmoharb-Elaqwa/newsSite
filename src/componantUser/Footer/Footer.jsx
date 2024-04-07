@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <div className="footer pt-5 pb-3">
+      <div className="footer pt-5 pb-3 ">
         <div className="container">
           <h3 className="mb-4">الثورة السورية</h3>
           <div className="row gy-4">

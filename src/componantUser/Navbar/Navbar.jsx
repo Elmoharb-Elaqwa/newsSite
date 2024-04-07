@@ -56,7 +56,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <NavLink
-                to="symbolthourauser"
+                to="/symbolthourauser"
                 className="nav-link position-relative evolution-archive"
                 aria-current="page"
               >
@@ -74,7 +74,7 @@ export default function Navbar() {
               <NavLink
                 className="nav-link position-relative evolution-archive"
                 aria-current="page"
-                to="blacklistuser"
+                to="/blacklistuser"
               >
                 القائمة السوداء{' '}
                 <i className="fa-solid fa-greater-than text-muted"></i>
@@ -90,7 +90,7 @@ export default function Navbar() {
               <NavLink
                 className="nav-link position-relative evolution-archive"
                 aria-current="page"
-                to="graamsystem"
+                to="/graamsystem"
               >
                 جرائم النظام{' '}
                 <i className="fa-solid fa-greater-than text-muted"></i>
@@ -108,7 +108,7 @@ export default function Navbar() {
               <NavLink
                 className="nav-link position-relative evolution-archive"
                 aria-current="page"
-                to="graemqasad"
+                to="/graemqasad"
               >
                 جرائم قسد{' '}
                 <i className="fa-solid fa-greater-than text-muted"></i>
@@ -124,7 +124,7 @@ export default function Navbar() {
               <NavLink
                 className="nav-link position-relative evolution-archive"
                 aria-current="page"
-                to="graemdashuser"
+                to="/graemdashuser"
               >
                 جرائم داعش{' '}
                 <i className="fa-solid fa-greater-than text-muted"></i>
@@ -135,6 +135,11 @@ export default function Navbar() {
                   <NavLink className="nav-link text-white">المعتقلين</NavLink>
                 </div>
               </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/WantedToSystem">
+              المطلوبين للنظام             
+               </NavLink>
             </li>
           </ul>
         </div>

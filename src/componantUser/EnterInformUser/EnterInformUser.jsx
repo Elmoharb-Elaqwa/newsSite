@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import styles from './EnterInform.module.css'
 import AddShahedUser from '../AddSahedUser/AddShahedUser';
 import AddMoataelUser from '../AddMoataelUser/AddMoataelUser';
@@ -8,10 +8,12 @@ import AddKaaenUser from '../AddKaaenUser/AddKaaenUser';
 import AddCreditTakremUser from '../AddCreditTakremUser/AddCreditTakremUser';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-import { useUser } from '../../context/Context';
+import { ContextUser} from '../../context/Context';
 export default function EnterInformUser() {
+
+  const {setOpenAuth}= useContext(ContextUser)
+
     const [ choiceArchife, setChoiceArchife ] = useState('martyr');
-    const{closeAuth}=useUser()
   return (
     <div className={styles.RegisterUser}>
       <div className={styles.forms}>
@@ -23,7 +25,7 @@ export default function EnterInformUser() {
             color: "red",
             cursor: "pointer",
           }}
-          onClick={closeAuth}
+          onClick={()=>setOpenAuth('')}
         />
         <div className={styles.headhere}>
           <h6>ادخال بيانات</h6>

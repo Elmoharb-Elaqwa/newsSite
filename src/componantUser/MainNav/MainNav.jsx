@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import './MainNav.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import style from '../RegisterUser/RegisterUser.module.css'
 import RegisterUser from '../RegisterUser/RegisterUser';
 import LoginUser from '../LoginUser/LoginUser';
-import { useUser } from '../../context/Context';
+import { ContextUser } from '../../context/Context';
 import SuccessRegister from '../SuccessRegister/SuccessRegister';
 import ForgetPassword from '../ForgetPassword/ForgetPassword';
-
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+ import RestNewPassword from '../ResetNewPassword/RestNewPassword'
 export default function MainNav() {
   const [open, setOpen] = useState(false);
-  const { openRegister, openLogin, openAuth } = useUser();
+  const [openNoti , setOpenNoti] = useState(false)
+  const {openAuth, setOpenAuth}= useContext(ContextUser)
   return (
     <>
       <div className="container">
@@ -32,8 +37,12 @@ export default function MainNav() {
               <p className="m-0 p-0 btn" onClick={() => setOpen(true)}>
                 تواصل معنا
               </p>
+              <div className="notification position-relative"  onClick={()=>setOpenNoti(true)}>
+              <i class="fa-regular fa-bell me-2"></i>
+              </div>
             </div>
           </div>
+          
           <div className="col-md-6">
             <div className="search d-flex justify-content-between align-items-center position-relative">
               <i className="fa-solid fa-magnifying-glass search-icon"></i>
@@ -43,10 +52,11 @@ export default function MainNav() {
                 className=" form-control pe-5"
               />
               <div className="buttons d-flex align-items-center gap-2">
-                <button className="btn btn-create" onClick={openRegister}>
+                
+                <button className="btn btn-create" onClick={()=>setOpenAuth('register')}>
                   انشاء حساب
                 </button>
-                <button className="btn btn-login" onClick={openLogin}>
+                <button className="btn btn-login" onClick={()=>setOpenAuth('login')}>
                   تسجيل الدخول
                 </button>
               </div>
@@ -54,10 +64,49 @@ export default function MainNav() {
           </div>
         </div>
       </div>
+
+      {openNoti ?<div className={style.RegisterUser}>
+      <div className={style.forms}>
+        <div className={style.headForm} onClick={()=>setOpenNoti(false)}>
+        <FontAwesomeIcon
+              icon={faCircleXmark}
+              style={{
+                position: "absolute",
+                top: "-20%",
+                right: 0,
+                color: "red",
+                cursor: "pointer",
+              }}
+            />
+        </div>
+              <div className="notification-body p-5">
+                <div className="new">
+                  <h3 className='text-danger'><span><i class="fa-regular fa-bell ms-2 mb-2"></i></span> الإشعارات الجديدة</h3>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>تهانينا ! تم مراجعة بيانات حسابك وقبول اشتراكك, شكرا لانضمامك إلينا</p>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>تهانينا ! تم مراجعة بيانات حسابك وقبول اشتراكك, شكرا لانضمامك إلينا</p>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>تهانينا ! تم مراجعة بيانات حسابك وقبول اشتراكك, شكرا لانضمامك إلينا</p>
+                </div>
+                <hr />
+                <div className="old">
+                  <h3><span><i class="fa-regular fa-circle-check ms-3 mb-2"></i></span>تمت مشاهدتها</h3>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>عفوا! يرجى مراجعة البيانات و الوثائق التي تم رفعها وإعادة الإرسال مرة أخرى. </p>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>تم قبول البيانات التي أدخلتها ورفعها على الموقع بنجاح , شكرا لمشاركتك معنا</p>
+                  <p className=' position-relative bg-white p-2 pe-5 m-0 mb-2'>تهانينا ! تم مراجعة بيانات حسابك وقبول اشتراكك, شكرا لانضمامك إلينا</p>
+                </div>
+              </div>
+      </div>
+    </div>:null }
+
+
       {openAuth === 'register' && <RegisterUser />}
       {openAuth === 'login' && <LoginUser />}
       {openAuth === 'successRegister' && <SuccessRegister />}
       {openAuth === 'forget' && <ForgetPassword />}
+      {openAuth === 'forget' && <ForgetPassword />}
+      {openAuth === 'rest' && <RestNewPassword/>}
+
+      rest
     </>
   );
 }
+

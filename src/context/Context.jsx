@@ -1,44 +1,12 @@
 import { createContext, useContext, useState} from "react";
+
 const ContextUser = createContext();
 
 function ContextProvider({ children }) {
   const [openAuth, setOpenAuth] = useState();
 
-    function openRegister() {
-        setOpenAuth( 'register' );
-}
-    function openLogin() {
-      setOpenAuth("login");
-    }
-
-    function closeAuth() {
-        setOpenAuth( '' );
-}
-  function successRegister() {
-  setOpenAuth('successRegister')
-  }
-  function Forget() {
-    setOpenAuth("forget");
-  }
-  function openInform() {
-    setOpenAuth( 'enterinform' );
-  }
-  function successAddInForm(){
-    setOpenAuth( 'successaddinform' );
-  }
   return (
-    <ContextUser.Provider
-      value={{
-        openAuth,
-        openRegister,
-        openLogin,
-        closeAuth,
-        successRegister,
-        Forget,
-        openInform,
-        successAddInForm,
-      }}
-    >
+    <ContextUser.Provider value={{openAuth ,setOpenAuth,}}>
       {children}
     </ContextUser.Provider>
   );
@@ -51,4 +19,4 @@ function useUser() {
   }
   return context;
 }
-export { useUser, ContextProvider };
+export {  ContextProvider ,ContextUser, useUser};

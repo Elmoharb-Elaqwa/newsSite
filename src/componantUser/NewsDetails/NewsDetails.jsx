@@ -2,12 +2,18 @@ import React from 'react'
 import img2 from "../../assests/msg1018737373-9581.jpg";
 import img4 from "../../assests/msg1018737373-9582.jpg";
 import { Link } from "react-router-dom";
+import MainNav from '../MainNav/MainNav';
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 
 
 export default function NewsDetails() {
   return (
+
     <>
+         <MainNav/>
+         <Navbar/>
          <div className="demonstrations py-3">
         <div className="container">
           <div className="row">
@@ -223,6 +229,7 @@ export default function NewsDetails() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

@@ -1,10 +1,11 @@
-import React from 'react';
+import {React,useContext }from 'react';
 import style from '../RegisterUser/RegisterUser.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
-import { useUser } from '../../context/Context';
+import { ContextUser } from '../../context/Context';
 export default function SuccessRegister() {
-    const { closeAuth } = useUser();
+    
+    const {openAuth, setOpenAuth}= useContext(ContextUser)
 
   return (
     <div className={style.RegisterUser}>
@@ -15,7 +16,7 @@ export default function SuccessRegister() {
           <p>تم ارسال كافة البيانات بنجاح شكرا لانضمامك الينا</p>
 
           <div className={style.btnInpu}>
-            <button onClick={closeAuth}> الرجوع للرئيسية</button>
+            <button onClick={()=>setOpenAuth('')}> الرجوع للرئيسية</button>
           </div>
         </div>
       </form>
