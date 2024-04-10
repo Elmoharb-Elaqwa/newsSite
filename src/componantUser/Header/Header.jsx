@@ -1,14 +1,15 @@
 import {React,useContext} from 'react';
 import image1 from '../../assests/photo_2024-04-03_23-07-55.jpg';
 import './Header.css';
-import { useUser,ContextUser } from '../../context/Context';
+import { ContextUser } from '../../context/Context';
 import EnterInformUser from '../EnterInformUser/EnterInformUser';
 import SuccessAddInform from '../SuccessAddInform/SuccessAddInform';
 import FaildAddInform from '../FaildAddForm/FaildAddForm';
 export default function Header() {
+
   const {openAuth, setOpenAuth}= useContext(ContextUser)
 
-  // const { openInform, openAuth,openFaild } = useUser();
+  
   return (
     <>
       <div className="header-container overflow-hidden perantHeader">
@@ -27,11 +28,9 @@ export default function Header() {
           
         </div>
         
-        <button className="head-btn" onClick={()=>setOpenAuth('faild')}>
-             فشل{' '}
-          </button>
-        <img src={image1} alt="mainpicture" className="head-img" />
+      <img src={image1} alt="mainpicture" className="head-img" />
       </div>
+      
       {openAuth === 'enterinform' && <EnterInformUser />}
       {openAuth === 'successaddinform' && <SuccessAddInform />}
       {openAuth === 'faild' && <FaildAddInform />}

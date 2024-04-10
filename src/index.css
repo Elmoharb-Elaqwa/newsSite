@@ -72,6 +72,6 @@ table td {
 
 
 .slick-prev:before, .slick-next:before {
-  color: black;
-  font-size: 30px;
+  color: black !important;
+  font-size: 30px !important;
 }

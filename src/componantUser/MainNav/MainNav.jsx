@@ -22,7 +22,7 @@ export default function MainNav() {
             <h1 className="m-0 h4">الثورة السورية</h1>
             <div className="contact d-flex justify-content-between align-items-center position-relative">
               {open === true ? (
-                <div className="social-icons d-flex align-items-center ms-1 p-2 text-white ">
+                <div className="social-icons d-flex align-items-center ms-5 p-2 text-white ">
                   <i className="fa-brands fa-whatsapp ms-3"></i>
                   <i className="fa-brands fa-instagram ms-3"></i>
                   <i className="fa-brands fa-tiktok ms-3"></i>
@@ -34,7 +34,7 @@ export default function MainNav() {
                   ></i>
                 </div>
               ) : null}
-              <p className="m-0 p-0 btn" onClick={() => setOpen(true)}>
+              <p className="m-0 p-3 p-0 btn" onClick={() => setOpen(true)}>
                 تواصل معنا
               </p>
               <div className="notification position-relative"  onClick={()=>setOpenNoti(true)}>
@@ -100,12 +100,11 @@ export default function MainNav() {
 
       {openAuth === 'register' && <RegisterUser />}
       {openAuth === 'login' && <LoginUser />}
-      {openAuth === 'successRegister' && <SuccessRegister />}
-      {openAuth === 'forget' && <ForgetPassword />}
+      {/* {openAuth === 'successRegister' && <SuccessRegister />} */}
       {openAuth === 'forget' && <ForgetPassword />}
       {openAuth === 'rest' && <RestNewPassword/>}
-
-      rest
+      {openAuth === 'return' && <RestNewPassword/>}
+      
     </>
   );
 }

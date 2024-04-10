@@ -38,6 +38,18 @@ export default function WantedToSystem() {
               <td>علي محمد</td>
             </tr>
             <tr>
+              <td>3</td>
+              <td>علي محمد</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>علي محمد</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>علي محمد</td>
+            </tr>
+            <tr>
               <td>4</td>
               <td>علي محمد</td>
             </tr>

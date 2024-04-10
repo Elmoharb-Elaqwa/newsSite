@@ -38,6 +38,7 @@ import NewsDetails from './componantUser/NewsDetails/NewsDetails';
 import WantedToSystem from './componantUser/WantedToSytstem/WantedToSystem';
 import { ContextDashboardProvider } from './context/DashboardContext';
 import { ContextUserProvider } from './context/UserContext';
+import SuccessRegister from './componantUser/SuccessRegister/SuccessRegister';
 
 export default function App() {
   return (
@@ -54,8 +55,9 @@ export default function App() {
             <Route path="graamsystem" element={<BaraemSystem />} />
             <Route path="graemqasad" element={<GaraamQasad />} />
             <Route path="graemdashuser" element={<GaraamDaaehUser />} />
-          
+            <Route path="/success/:id" element={<SuccessRegister />} />
           </Route>
+          
           <Route path="newsDetails" element={<NewsDetails />} />
           <Route path="WantedToSystem" element={<WantedToSystem />} />
 

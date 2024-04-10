@@ -4,8 +4,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    height: 100%;
-    background-color:#00011C80;z-index: 5;
+    height: 90%;
+    background-color:#00011C80;
+    z-index: 5;
 }
 
 .forms{
@@ -30,7 +31,7 @@
     background: #3035A1;
   }
 .formsForget{
-        width: 45%;
+    width: 45%;
     height: 55%;
     background-color: #F7F7F7;
     margin: auto;
@@ -54,7 +55,7 @@
     border-radius: 5px;
     transform: translateY(20%);
     overflow: auto;
-position: relative;
+   position: relative;
 }
 
 
@@ -106,12 +107,13 @@ transform: translateY(25px);
     width: 45%;
 }
 .inform .input .inpi label{
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     font-size: 12px;
 }
 .inform .input input{
     width: 100%;
     padding: 2px !important;
+    margin-bottom: 2px;
 }
 .inpi2{
     display: flex;
@@ -132,13 +134,13 @@ transform: translateY(25px);
     gap: 20px;
 }
 .picture{
-       display:flex;
-    margin-top: 10px;
+    display:flex;
+    margin-top: 20px;
     gap: 20px;
 }
 .wateca p:first-child,.pictureText p{
     font-size:12px;
-    font-weight: 500;
+    font-weight: 600;
 }
 .wateca p:first-child span{
     color: #3035A1;
@@ -173,12 +175,12 @@ input[type="file"] {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .btnInpu button{
     width: fit-content;
     font-size: 12px;
-      border: none;
+    border: none;
     width: 200px;
     padding: 5px 10px;
     background-color: transparent;
@@ -232,4 +234,9 @@ input[type="file"] {
    .formsForget{
         width: 95%;
     }
+}
+
+.alert{
+    font-size: 10px;
+    font-weight: 50px;
 }
