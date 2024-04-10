@@ -39,71 +39,78 @@ import WantedToSystem from './componantUser/WantedToSytstem/WantedToSystem';
 import { ContextDashboardProvider } from './context/DashboardContext';
 import { ContextUserProvider } from './context/UserContext';
 import SuccessRegister from './componantUser/SuccessRegister/SuccessRegister';
+import UpdatedPassword from './componantUser/UpdatedPassword/UpdatedPassword';
+import CheckCom from './componantUser/CheckCom';
 
 export default function App() {
   return (
     <ContextDashboardProvider>
       <ContextUserProvider>
-    <ContextProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomeUser />}>
-            <Route path="/" element={<MainPage />} />
-            <Route path="archiefthoura" element={<ArchiefThourahUser />} />
-            <Route path="symbolthourauser" element={<SymbolThouraUser />} />
-            <Route path="blacklistuser" element={<BlackListUser />} />
-            <Route path="graamsystem" element={<BaraemSystem />} />
-            <Route path="graemqasad" element={<GaraamQasad />} />
-            <Route path="graemdashuser" element={<GaraamDaaehUser />} />
-            <Route path="/success/:id" element={<SuccessRegister />} />
-          </Route>
-          
-          <Route path="newsDetails" element={<NewsDetails />} />
-          <Route path="WantedToSystem" element={<WantedToSystem />} />
+        <ContextProvider>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<HomeUser />}>
+                <Route path="/" element={<MainPage />} />
+                <Route path="archiefthoura" element={<ArchiefThourahUser />} />
+                <Route path="symbolthourauser" element={<SymbolThouraUser />} />
+                <Route path="blacklistuser" element={<BlackListUser />} />
+                <Route path="graamsystem" element={<BaraemSystem />} />
+                <Route path="graemqasad" element={<GaraamQasad />} />
+                <Route path="graemdashuser" element={<GaraamDaaehUser />} />
+                <Route path="success/:id" element={<UpdatedPassword />} />
+              </Route>
+              <Route path="youMan" element={<CheckCom />} />
 
+              <Route path="newsDetails" element={<NewsDetails />} />
+              <Route path="WantedToSystem" element={<WantedToSystem />} />
 
-
-          <Route path="dashboard" element={<HomeDashboard />}>
-            <Route path="supervisor" element={<SuperVisors />} />
-            <Route path="addsupervisor" element={<AddSuperVisor />} />
-            <Route path="updatesupervisor" element={<UpdateSupervisors />} />
-            <Route path="martyrs" element={<MartyrsDash />} />
-            <Route path="displaymartyrs" element={<DisplayMartysDash />} />
-            <Route path="detaineesdash" element={<DetaineesDash />} />
-            <Route
-              path="displaydetainess"
-              element={<DisplayDestainessDash />}
-            />
-            <Route path="missingdash" element={<MissingDash />} />
-            <Route path="displaymissing" element={<DisplayMissingDash />} />
-            <Route path="warcriminals" element={<WarCriminals />} />
-            <Route
-              path="displaywarcriminals"
-              element={<DisplayWarCriminals />}
-            />
-            <Route path="traitors" element={<TraitorsDash />} />
-            <Route path="displaytraitor" element={<DisplayTraitorsDash />} />
-            <Route path="honorcard" element={<HonorCard />} />
-            <Route path="displayhonorcard" element={<DisplayHonorCard />} />
-            <Route path="lastnewsdash" element={<LastNewsDash />} />
-            <Route
-              path="revolutionarchivedash"
-              element={<RevolutionArchiveDash />}
-            />
-            <Route
-              path="symbolsoftherevolution"
-              element={<SymbolsoftheRevolution />}
-            />
-            <Route path="blacklist" element={<BlackListDash />} />
-            <Route path="crimessystem" element={<CrimesSystem />} />
-            <Route path="userDash" element={<UsersDash />} />
-            <Route path="AddUser" element={<AddUser />} />
-            <Route path="updateuser" element={<UpdateUser />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ContextProvider>
-    </ContextUserProvider>
+              <Route path="dashboard" element={<HomeDashboard />}>
+                <Route path="supervisor" element={<SuperVisors />} />
+                <Route path="addsupervisor" element={<AddSuperVisor />} />
+                <Route
+                  path="updatesupervisor"
+                  element={<UpdateSupervisors />}
+                />
+                <Route path="martyrs" element={<MartyrsDash />} />
+                <Route path="displaymartyrs" element={<DisplayMartysDash />} />
+                <Route path="detaineesdash" element={<DetaineesDash />} />
+                <Route
+                  path="displaydetainess"
+                  element={<DisplayDestainessDash />}
+                />
+                <Route path="missingdash" element={<MissingDash />} />
+                <Route path="displaymissing" element={<DisplayMissingDash />} />
+                <Route path="warcriminals" element={<WarCriminals />} />
+                <Route
+                  path="displaywarcriminals"
+                  element={<DisplayWarCriminals />}
+                />
+                <Route path="traitors" element={<TraitorsDash />} />
+                <Route
+                  path="displaytraitor"
+                  element={<DisplayTraitorsDash />}
+                />
+                <Route path="honorcard" element={<HonorCard />} />
+                <Route path="displayhonorcard" element={<DisplayHonorCard />} />
+                <Route path="lastnewsdash" element={<LastNewsDash />} />
+                <Route
+                  path="revolutionarchivedash"
+                  element={<RevolutionArchiveDash />}
+                />
+                <Route
+                  path="symbolsoftherevolution"
+                  element={<SymbolsoftheRevolution />}
+                />
+                <Route path="blacklist" element={<BlackListDash />} />
+                <Route path="crimessystem" element={<CrimesSystem />} />
+                <Route path="userDash" element={<UsersDash />} />
+                <Route path="AddUser" element={<AddUser />} />
+                <Route path="updateuser" element={<UpdateUser />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </ContextProvider>
+      </ContextUserProvider>
     </ContextDashboardProvider>
   );
 }
